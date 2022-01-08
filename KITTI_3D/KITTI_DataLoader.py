@@ -180,10 +180,10 @@ class KittiObjectClass:
 
 
 data_dir = "../KITTI_3D/training/"
+some_files = os.listdir(data_dir)
 im_dir = data_dir + "image_2/"
 lbl_dir = data_dir + "label_2/"
 clb_dir = data_dir + "calib/"
 lid_dir = data_dir + "velodyne/"
 kitti = KITTI(im_dir, lbl_dir, lid_dir, clb_dir)
 kitti.visualize(8)
-# some random change
