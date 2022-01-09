@@ -5,6 +5,12 @@ import numpy as np
 
 
 def gen_color_encoding(src_image: np.ndarray, overlay_image: np.ndarray):
+    """
+    Generates color map for the label image
+    :param src_image: 2D numpy array with label mapping in the form [0, 1, 2, ...] corresponding to lane number
+    :param overlay_image: image on to which color mapped image needs to be overlaid
+    :return: color mapped image overlaid on to given label image for better visualization
+    """
     max_scale = np.amax(src_image)
     mask = src_image == 0
     scale = int(255 / max_scale)
@@ -16,11 +22,10 @@ def gen_color_encoding(src_image: np.ndarray, overlay_image: np.ndarray):
 
 data_dir = "../../../TuSimple_lane_detection/"
 files = os.listdir(data_dir + 'images')
-file = files[50]
-image = cv2.imread(data_dir + 'images/' + file)
-label = cv2.imread(data_dir + 'ground_truth/' + file[:-3] + 'png')[..., 0]  # has each lane encoded as 0, 1, 2 etc.
-print(np.unique(label))
-label_map = gen_color_encoding(label, image)
-cv2.imwrite("Figures/sample_visualization_2.png", label_map)
-plt.imshow(label_map)
-plt.show()
+for file in files[:10]:
+    image = cv2.imread(data_dir + 'images/' + file)
+    label = cv2.imread(data_dir + 'ground_truth/' + file[:-3] + 'png')[..., 0]  # label has each lane encoded as 1, 2...
+    label_map = gen_color_encoding(label, image)
+    # cv2.imwrite("Figures/sample_visualization_2.png", label_map) #  uncomment for writing sample image
+    plt.imshow(label_map)
+    plt.show()
