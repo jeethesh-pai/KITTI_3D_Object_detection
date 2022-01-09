@@ -1,6 +1,7 @@
 # End to End Lane Detection
 
-This repo is an unofficial implementation of the Paper [End-to-end-Lane-Detection] by Wouter Van Gansbeke et al. 
+This repo is an unofficial implementation of the Paper 
+![End-to-end-Lane-Detection](https://arxiv.org/pdf/1902.00293.pdf) by Wouter Van Gansbeke et al. 
 For the official Implementation and analysis, please visit their [Github-Lane-Detection-Official] - Pytorch. 
 I have taken a lot of inspiration from their repo as well as from 
 [Lane-Detection-Unofficial-Implementation] - Tensorflow 1.12 Version 
