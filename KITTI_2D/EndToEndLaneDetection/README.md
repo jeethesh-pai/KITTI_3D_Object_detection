@@ -15,7 +15,9 @@ from Curated Dataset.
 ![Sample 2](Figures/sample_visualization_2.png?raw=true "Image 2 with Ground Truth Overlaid")
 
 
-
+[//]: #  (These are reference links used in the body of this note and get stripped out when the markdown processor 
+does its job. There is no need to format nicely because it shouldn't be seen. 
+Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
 [End-to-end Lane Detection] : <https://arxiv.org/pdf/1902.00293.pdf>
 [Github Lane Detection Official] : <https://github.com/wvangansbeke/LaneDetection_End2End>
